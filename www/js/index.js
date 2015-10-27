@@ -1,5 +1,3 @@
-var APP_ID = "APP_ID";//replace with appropriate value
-var APP_KEY = "APP_KEY";//replace with appropriate value
 var kii;
 
 var onLogin = function (){
@@ -82,7 +80,8 @@ var app = {
           document.getElementById("logoutBtn").onclick = onLogout;
           document.getElementById("signupBtn").onclick = onSignup;
           kii = window.kii.create();
-          kii.Kii.initializeWithSite(APP_ID, APP_KEY, kii.KiiSite.JP);
+          // replace APP_ID, APP_KEY, and KII_SITE with appropriate values
+          kii.Kii.initializeWithSite(APP_ID, APP_KEY, KII_SITE);
 
           // replace sender_id with appropriate value
           window.kiiPush.initAndroid("sender_id", "pushReceived", {
