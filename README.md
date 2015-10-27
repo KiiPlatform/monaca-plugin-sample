@@ -48,7 +48,7 @@ kii.Kii.initializeWithSite(APP_ID, APP_KEY, KII_SITE);
 
 - change `sender_id` with appropriate value in the `index.js` file located under `www/js` folder.
 
-**Note**: To leverage GCM with Kii Cloud, please refer the [Guild](If you don't know how to create an app from Kii Cloud, please refer the [Guild](http://docs.kii.com/en/guides/javascript/quickstart/).
+**Note**: To leverage GCM with Kii Cloud, please refer the [Guild](http://documentation.kii.com/en/samples/push-notifications/push-notifications-android/).
 
 ```
 window.kiiPush.initAndroid("sender_id", "pushReceived", {
