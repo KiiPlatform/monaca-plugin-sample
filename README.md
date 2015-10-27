@@ -1,7 +1,6 @@
-A Monaca sample using Kii Cloud Cordova plugin.
+A Monaca sample project using Kii Cloud Cordova plugin.
 
 ## Usage
-Thi project can be imported to Monaca.
 
 ### Get source code
 
@@ -38,13 +37,18 @@ Import the zip file to Monaca.
 
 - Change `APP_ID`, `APP_KEY`, and `KII_SITE` with appropriate values in the `index.js` file located under `www/js` folder
 
+**Note**: If you don't know how to create an app from Kii Cloud, please refer the [Guild](http://docs.kii.com/en/guides/javascript/quickstart/).
+
+
 ```
 // replace APP_ID, APP_KEY, and KII_SITE with appropriate values
 kii.Kii.initializeWithSite(APP_ID, APP_KEY, KII_SITE);
 
 ```
 
-- change sender_id with appropriate value in the `index.js` file located under `www/js` folder
+- change `sender_id` with appropriate value in the `index.js` file located under `www/js` folder.
+
+**Note**: To leverage GCM with Kii Cloud, please refer the [Guild](If you don't know how to create an app from Kii Cloud, please refer the [Guild](http://docs.kii.com/en/guides/javascript/quickstart/).
 
 ```
 window.kiiPush.initAndroid("sender_id", "pushReceived", {
