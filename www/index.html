@@ -1,56 +1,52 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <script src="components/loader.js"></script>
-    <link rel="stylesheet" href="components/loader.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <section id="container"></section>
-  <script id="topTemplate" type="text/ractive">
-    <h1>Hello Kii Monaca</h1>
-    <ul>
-      <li><label>email</label><input type="text" value="{{email}}"/></li>
-      <li><label>password</label><input type="password" value="{{password}}"/></li>
-    </ul>
-    <button on-click="login" disabled="{{inProgress}}">Log in</button>
-    <p class="button" on-click="signup">Sign up</p>
-  </script>
-  
-  <script id="signupTemplate" type="text/ractive">
-    <h1>Sign up</h1>
-    <ul>
-      <li><label>email</label><input type="text" value="{{email}}"/></li>
-      <li><label>password</label><input type="password" value="{{password}}"/></li>
-    </ul>
-    <button on-click="signup" disabled="{{inProgress}}">Sign up</button>
-  </script>
-  
-  <script id="listTemplate" type="text/ractive">
-    <h1>Your item</h1>
-    <div>
-      <input id="subscribe" type="checkbox" checked="{{subscribed}}" on-change="changeSubscribe"/><label for="subscribe">自動更新</label>
-    </div>
-    <ul>
-      {{#list}}
-      <li>{{get('memo')}}</li>
-      {{/}}
-    </ul>
-    <div>
-      <label>Memo</label><input type="text" value="{{memo}}"/>
-      <button on-click="add">Add</button>
-    </div>
-  </script>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ractive/0.7.3/ractive.js"
-></script>
-  <!-- for backbone.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/under
-score-min.js"></script>
-  <script src="https://code.jquery.com/jquery-1.9.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
-  <script src="./js/app.js"></script>
-</body>
+    <head>
+        <title>Monaca Sample</title>
+    </head>
+    <body>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script src="https://code.jquery.com/jquery-1.9.0.min.js"></script>
+        <div style="margin-top:100px">
+            <h1>Kii Cloud</h1>
+            <div id='login_table'>
+                <table width="300px" style="margin-left: 10px">
+                    <tr>
+                        <td valign="top">
+                            <label for="Email">Email *</label>
+                        </td>
+                        <td valign="top">
+                        <input type="text" id="email" name="email" maxlength="50" size="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <label for="password">Password *</label>
+                        </td>
+                        <td valign="top">
+                            <input type="password" id="password" name="password" maxlength="50" size="30">
+                        </td>
+                    </tr>
+                    <tr>
+                       <td style="text-align:center">
+                          <button id="loginBtn">Login</button>
+                       </td>
+                       <td style="text-align:center">
+                          <button id="signupBtn">Signup</button>
+                       </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id='loggedin_table' style='display: none'>
+              <table width="300px" style="margin-left: 10px">
+                  <tr>
+                    <td style="text-align:center">
+                       <button id="logoutBtn">Logout</button>
+                    </td>
+                  </tr>
+              </table>
+            </div>
+        </div>
+    </body>
 </html>
