@@ -3,54 +3,25 @@ A Monaca sample project using Kii Cloud Cordova plugin.
 ## Usage
 
 ### Get source code
+TODO: link to the zip download in GH.
 
-Get the source code from Github
+### Import app with Monaca IDE
+Import the downloaded zip file with Monaca IDE.
 
-```
-$ git clone https://github.com/KiiPlatform/monaca-plugin-sample
-```
+### Setup plugin in Monaca IDE
+TODO: write
 
-### Update kiicloud-plugin
-
-1. Get kiicloud-plugin from Github [Repository]()
-
-  ```
-  $ git clone
-  ```
-
-2. Update Kii Cloud Javascript SDK in the kiicloud-plugin.
-
-  - Download the latest Kii Cloud Javascript SDK from [Kii Developer Portal](https://developer.kii.com/v2/downloads)
-  - Replace the file `www/kiisdk.js` file under the kiicloud-plugin root folder with the latest Kii Cloud Javascript SDK. Make sure the file name is `kiisdk.js`
-
-3. Replace kiicloud-plugin folder in sample project downloaded in the [section](#get-source-code). The source code folder of kiicloud-plugin is `plugins/kiicloud-plugin`
-
-### Zip this project
-
-Compress the downloaded sample code folder `monaca-plugin-sample` as zip file.
-
-### Import to Monaca
-
-Import the zip file to Monaca.
+NOTE: We will release Kii Cloud Cordova plugin as Monaca plugin.
+After that you don't need to import it from Github.
 
 ### Initialize kiicloud-plugin
+TODO: write
 
-- Change `APP_ID`, `APP_KEY`, and `KII_SITE` with appropriate values in the `index.js` file located under `www/js` folder
+### Setup push for Android
+TODO: write
 
-**Note**: If you don't know how to create an app from Kii Cloud, please refer the [Guild](http://docs.kii.com/en/guides/javascript/quickstart/).
+### Setup push for iOS
+TODO: write
 
-
-```
-// replace APP_ID, APP_KEY, and KII_SITE with appropriate values
-kii.Kii.initializeWithSite(APP_ID, APP_KEY, KII_SITE);
-
-```
-
-- change `sender_id` with appropriate value in the `index.js` file located under `www/js` folder.
-
-**Note**: To leverage GCM with Kii Cloud, please refer the [Guild](http://documentation.kii.com/en/samples/push-notifications/push-notifications-android/).
-
-```
-window.kiiPush.initAndroid("sender_id", "pushReceived", {
-
-```
+### Send push notification.
+TODO: write. (Using direct push in dev-portal.)
