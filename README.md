@@ -22,21 +22,23 @@ After that you don't need to import it from Github.
 ### Initialize kiicloud-plugin
 - Go to https://developer.kii.com and create your app.
 
--  Replace `APP_ID`, `APP_KEY`, and `KII_SITE` with the values of you app in the `index.js` file located under `www/js` folder
+-  Replace `APP_ID`, `APP_KEY`, and `KII_SITE` with the values of your app.
 
-```
+`index.js` file located under `www/js` folder
+```js
 // replace APP_ID, APP_KEY, and KII_SITE with appropriate values
 kii.Kii.initializeWithSite(APP_ID, APP_KEY, KII_SITE);
-
 ```
+
 For more details, please refer to the [guide](http://docs.kii.com/en/guides/javascript/quickstart/).
 
 
 ### Setup push for Android
 
-- Replace `sender_id` with the appropriate value (Project ID can be obtained in Google Developer Console) in the `index.js` file located under `www/js` folder.
+- Replace `sender_id` with the appropriate value (Project ID can be obtained in Google Developer Console).
 
-```
+`index.js` file located under `www/js` folder.
+```js
 window.kiiPush.initAndroid("sender_id", "pushReceived", {
 ...
 ```
