@@ -10,7 +10,7 @@ Import the downloaded zip file with Monaca IDE.
 
 ### Setup plugin in Monaca IDE
 
-1. Download the zip file of kii-cordova-plugin by clicking this [link](https://github.com/KiiPlatform/kii-cordova-plugin/archive/monaca.zip).
+1. Download the zip file of kii-cordova-plugin from this [link](https://github.com/KiiPlatform/kii-cordova-plugin/releases).
 
 2. Import the zip file to Monaca IDE.
   * Click `File` -> `Manage Cordova Plugins`
