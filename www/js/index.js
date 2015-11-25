@@ -1,7 +1,14 @@
 var kii;
-
+function validateEmail(email) {
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return re.test(email);
+}
 var onLogin = function (){
     var email = document.getElementById("email").value;
+    if(!validateEmail(email)){
+        alert("Invalid email format");
+        return;
+    }
     var password = document.getElementById("password").value;
     kii.KiiUser.authenticate(email, password, {
        success: function (theUser) {
@@ -18,6 +25,10 @@ var onLogin = function (){
 
 var onSignup = function (){
     var email = document.getElementById("email").value;
+    if(!validateEmail(email)){
+        alert("Invalid email format");
+        return;
+    }
     var password = document.getElementById("password").value;
     var user = kii.KiiUser.userWithEmailAddress(email, password);
     user.register({
