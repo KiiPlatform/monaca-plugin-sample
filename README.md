@@ -35,6 +35,8 @@ For more details, please refer to the [guide](http://docs.kii.com/en/guides/java
 
 ### Setup push for Android
 
+For details of setup, please refer to [guide in cordova sample](https://github.com/KiiPlatform/cordova-plugin-sample#setup-push-for-android-fcm)
+
 - Replace `sender_id` with the appropriate value (Project ID can be obtained in Google Developer Console).
 
 `index.js` file located under `www/js` folder.
